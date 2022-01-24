@@ -1,5 +1,5 @@
 {
-  "name": "@tower1229/axios-cache",
+  "name": "@tower1229/axios",
   "version": "1.0.0",
   "description": "The same API as Axios, with an additional cache function for `Instance.get()`",
   "private": false,
