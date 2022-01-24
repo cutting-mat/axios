@@ -2,7 +2,7 @@
 
 # @tower1229/axios
 
-[![npm](https://img.shields.io/npm/v/@tower1229/axios.svg)](https://www.npmjs.com/package/@tower1229/axios-cache) [![license](https://img.shields.io/github/license/tower1229/axios-cache.svg)]()
+[![npm](https://img.shields.io/npm/v/@tower1229/axios.svg)](https://www.npmjs.com/package/@tower1229/axios) [![license](https://img.shields.io/github/license/tower1229/axios-cache.svg)]()
 
 Axios的升级替代品，与Axios完全相同的API，仅仅为`Instance.get()`方法扩展缓存功能
 
@@ -19,13 +19,13 @@ instance.get(url[, config[, cache config]])
 1. 使用npm安装:
 
 ``` bash
-npm i @tower1229/axios-cache --save
+npm i @tower1229/axios --save
 ```
 
 2. 导入到项目
 
 ``` js
-import axios from "@tower1229/axios-cache"
+import axios from "@tower1229/axios"
 
 ```
 

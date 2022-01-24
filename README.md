@@ -2,7 +2,7 @@ English | [中文](README_CN.md)
 
 # @tower1229/axios
 
-[![npm](https://img.shields.io/npm/v/@tower1229/axios-cache.svg)](https://www.npmjs.com/package/@tower1229/axios-cache) [![license](https://img.shields.io/github/license/tower1229/axios-cache.svg)]()
+[![npm](https://img.shields.io/npm/v/@tower1229/axios.svg)](https://www.npmjs.com/package/@tower1229/axios) [![license](https://img.shields.io/github/license/tower1229/axios-cache.svg)]()
 
 The upgraded alternative of Axios, which has the same API as Axios, only extends the caching function for the `Instance.get()` method
 
@@ -19,13 +19,13 @@ instance.get(url[, config[, cache config]])
 1. install with npm:
 
 ```shell
-npm i @tower1229/axios-cache --save
+npm i @tower1229/axios --save
 ```
 
 2. import to your project
 
 ``` js
-import axios from "@tower1229/axios-cache"
+import axios from "@tower1229/axios"
 ```
 
 3. Create Axios instance
