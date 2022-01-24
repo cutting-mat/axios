@@ -1,0 +1,31 @@
+{
+  "name": "@tower1229/axios-cache",
+  "version": "1.0.0",
+  "description": "The same API as Axios, with an additional cache function for `Instance.get()`",
+  "source": "src/axios-cache.js",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "scripts": {
+    "watch": "parcel watch",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tower1229/axios-cache.git"
+  },
+  "keywords": [
+    "axios-cache"
+  ],
+  "author": "tower12229@foxmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tower1229/axios-cache/issues"
+  },
+  "homepage": "https://github.com/tower1229/axios-cache#readme",
+  "dependencies": {
+    "axios": "^0.25.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.2.1"
+  }
+}

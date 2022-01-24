@@ -1,34 +1,35 @@
-English | [中文](README_CN.md)
+中文 | [English](README.md)
 
 # @tower1229/axios-cache
 
 [![npm](https://img.shields.io/npm/v/axios-cache.svg)](https://www.npmjs.com/package/@tower1229/axios-cache) [![compatibility](https://img.shields.io/badge/compatibility-IE10%2B-orange.svg)]() [![license](https://img.shields.io/github/license/tower1229/axios-cache.svg)]()
 
-The upgraded alternative of Axios, which has the same API as Axios, only extends the caching function for the `Instance.get()` method
+Axios的升级替代品，与Axios完全相同的API，仅仅为`Instance.get()`方法扩展缓存功能
 
-## Features
+## 特性
 
-Add cache configuration for get method of Axios instance. If caching is enabled, get requests with the same address and parameters will be initiated only once.
+为Axios实例的 get 方法增加缓存配置，如果开启缓存，地址和参数都相同的get请求将只发起一次。
 
 ``` js
 instance.get(url[, config[, cache config]])
 ```
 
-## Getting started
+## 快速开始
 
-1. install with npm:
+1. 使用npm安装:
 
-```shell
+``` bash
 npm i @tower1229/axios-cache --save
 ```
 
-2. import to your project
+2. 导入到项目
 
 ``` js
 import axios from "@tower1229/axios-cache"
+
 ```
 
-3. Create Axios instance
+3. 创建请求实例
 
 ``` js
 const instance = axios.create({
@@ -40,20 +41,20 @@ const instance = axios.create({
 });
 ```
 
-4. Send get request (the only difference from Axios)
+4. 发送get请求（与Axios唯一的不同）
 
 ``` js
 /**
- * @param opt[Object] Additional cache configuration
- * @param opt.cache[Boolean] Whether to enable caching. It is not enabled by default
+ * @param opt[Object] 额外的缓存配置
+ * @param opt.cache[Boolean] 是否开启缓存，默认不开启
  * */ 
 
-// Enable cache
+// 开启缓存
 instance.get(`/url`, { params: 1 }, {
     cache: true
 })
 
-// Close the cache and clear the previous cache contents
+// 关闭缓存，并清除之前的缓存内容
 instance.get(`/url`, { params: 1 }, {
     cache: false
 })
