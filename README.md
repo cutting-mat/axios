@@ -2,7 +2,7 @@ English | [中文](README_CN.md)
 
 # @tower1229/axios-cache
 
-[![npm](https://img.shields.io/npm/v/axios-cache.svg)](https://www.npmjs.com/package/@tower1229/axios-cache) [![compatibility](https://img.shields.io/badge/compatibility-IE10%2B-orange.svg)]() [![license](https://img.shields.io/github/license/tower1229/axios-cache.svg)]()
+[![npm](https://img.shields.io/npm/v/@tower1229/axios-cache.svg)](https://www.npmjs.com/package/@tower1229/axios-cache) [![license](https://img.shields.io/github/license/tower1229/axios-cache.svg)]()
 
 The upgraded alternative of Axios, which has the same API as Axios, only extends the caching function for the `Instance.get()` method
 
