@@ -1,6 +1,6 @@
 中文 | [English](README.md)
 
-# @tower1229/axios-cache
+# @tower1229/axios
 
 [![npm](https://img.shields.io/npm/v/@tower1229/axios-cache.svg)](https://www.npmjs.com/package/@tower1229/axios-cache) [![license](https://img.shields.io/github/license/tower1229/axios-cache.svg)]()
 
