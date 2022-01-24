@@ -2,6 +2,7 @@
   "name": "@tower1229/axios-cache",
   "version": "1.0.0",
   "description": "The same API as Axios, with an additional cache function for `Instance.get()`",
+  "private": false,
   "source": "src/axios-cache.js",
   "main": "dist/main.js",
   "module": "dist/module.js",
