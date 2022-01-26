@@ -28,19 +28,19 @@ axios.create = function (config) {
 
         if (opt.cache) {
             if (!responseCache[requestKey]) {
-                console.log('cache-axios create cache:', requestKey)
+                // console.log('Axios create cache:', requestKey)
                 responseCache[requestKey] = axiosGet(url, params)
                 responseCache[requestKey].catch(() => {
                     delete responseCache[requestKey];
                 })
             }else{
-                console.log('cache-axios use cache:', requestKey)
+                // console.log('Axios use cache:', requestKey)
             }
             
             return responseCache[requestKey]
         } else {
             if(responseCache[requestKey]){
-                console.log('cache-axios clear cache:', requestKey)
+                // console.log('Axios clear cache:', requestKey)
                 delete responseCache[requestKey];
             }
             

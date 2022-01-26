@@ -1,6 +1,6 @@
 {
   "name": "@tower1229/axios",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The same API as Axios, with an additional cache function for `Instance.get()`",
   "private": false,
   "source": "src/axios-cache.js",
