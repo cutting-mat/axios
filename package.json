@@ -1,5 +1,5 @@
 {
-  "name": "@tower1229/axios",
+  "name": "@cutting-mat/axios",
   "version": "1.0.2",
   "description": "The same API as Axios, with an additional cache function for `Instance.get()`",
   "private": false,
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tower1229/axios-cache.git"
+    "url": "git+https://github.com/cutting-mat/axios-cache.git"
   },
   "keywords": [
     "axios-cache"
@@ -20,9 +20,9 @@
   "author": "tower12229@foxmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tower1229/axios-cache/issues"
+    "url": "https://github.com/cutting-mat/axios-cache/issues"
   },
-  "homepage": "https://github.com/tower1229/axios-cache#readme",
+  "homepage": "https://github.com/cutting-mat/axios-cache#readme",
   "dependencies": {
     "axios": "^0.25.0"
   },
