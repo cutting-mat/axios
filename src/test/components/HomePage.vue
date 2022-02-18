@@ -43,8 +43,8 @@
 </template>
 
 <script>
-import axios from "../index";
-import { responseCache } from "../index";
+import axios from "@/index";
+import { responseCache } from "@/index";
 
 // 创建请求实例
 const instance = axios.create({

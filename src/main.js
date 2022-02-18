@@ -6,7 +6,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
 // 全局样式
-import '@/assets/global.css';
+import '@/test/assets/global.css';
 
 import App from './App.vue'
 
