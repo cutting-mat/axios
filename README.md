@@ -2,9 +2,9 @@ English | [中文](README_CN.md)
 
 # @cutting-mat/axios
 
-[![npm](https://img.shields.io/npm/v/@cutting-mat/axios.svg)](https://www.npmjs.com/package/@cutting-mat/axios) [![license](https://img.shields.io/github/license/cutting-mat/axios-cache.svg)]()
+[![npm](https://img.shields.io/npm/v/@cutting-mat/axios.svg)](https://www.npmjs.com/package/@cutting-mat/axios) [![license](https://img.shields.io/github/license/cutting-mat/axios.svg)]()
 
-The upgraded alternative of Axios, which has the same API as Axios, only extends the caching function for the `Instance.get()` method
+The upgraded alternative of Axios, which has the same API as Axios, no side effects, only extends the caching function for the `Instance.get()` method
 
 ## Features
 

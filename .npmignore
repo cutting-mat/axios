@@ -1,4 +1,4 @@
-/.parcel-cache
-/node_modules
-/.vscode
+node_modules
+/public
 /src
+/docs

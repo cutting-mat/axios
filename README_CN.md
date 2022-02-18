@@ -2,9 +2,9 @@
 
 # @cutting-mat/axios
 
-[![npm](https://img.shields.io/npm/v/@cutting-mat/axios.svg)](https://www.npmjs.com/package/@cutting-mat/axios) [![license](https://img.shields.io/github/license/cutting-mat/axios-cache.svg)]()
+[![npm](https://img.shields.io/npm/v/@cutting-mat/axios.svg)](https://www.npmjs.com/package/@cutting-mat/axios) [![license](https://img.shields.io/github/license/cutting-mat/axios.svg)]()
 
-Axios的升级替代品，与Axios完全相同的API，仅仅为`Instance.get()`方法扩展缓存功能
+Axios的升级替代品，与Axios完全相同的API，无任何副作用，仅仅为 `Instance.get()` 扩展缓存功能
 
 ## 特性
 
