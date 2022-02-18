@@ -31,6 +31,7 @@
     <h3 class="channeltitle">演示</h3>
     <el-button @click="testRequest(true)"> 请求(缓存开) </el-button>
     <el-button @click="testRequest(false)"> 请求(缓存关) </el-button>
+    <el-button @click="testRequest('update')"> 请求(更新缓存) </el-button>
     <el-button @click="multiRequest(true)"> 并发3次请求(缓存开) </el-button>
     <el-button @click="multiRequest(false)"> 并发3次请求(缓存关) </el-button>
     <div class="log">

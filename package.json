@@ -1,6 +1,6 @@
 {
   "name": "@cutting-mat/axios",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "The same API as Axios, with an additional cache function for `Instance.get()`",
   "private": false,
   "main": "dist/index.common.js",
@@ -14,7 +14,8 @@
     "url": "git+https://github.com/cutting-mat/axios.git"
   },
   "keywords": [
-    "axios-cache"
+    "axios",
+    "cache"
   ],
   "author": "tower12229@foxmail.com",
   "license": "MIT",

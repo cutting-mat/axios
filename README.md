@@ -6,14 +6,6 @@ English | [中文](README_CN.md)
 
 The upgraded alternative of Axios, which has the same API as Axios, no side effects, only extends the caching function for the `Instance.get()` method
 
-## Features
-
-Add cache configuration for get method of Axios instance. If caching is enabled, get requests with the same address and parameters will be initiated only once.
-
-``` js
-instance.get(url[, config[, cache config]])
-```
-
 ## Getting started
 
 1. install with npm:
@@ -22,42 +14,58 @@ instance.get(url[, config[, cache config]])
 npm i @cutting-mat/axios --save
 ```
 
-2. import to your project
+2. Create Axios instance
 
 ``` js
 import axios from "@cutting-mat/axios"
+const instance = axios.create();
+
 ```
 
-3. Create Axios instance
+3. Send get request (the only difference from Axios)
 
 ``` js
-const instance = axios.create({
-    baseURL,
-    timeout: 10000,
-    headers: {
-        'Content-Type': 'application/json'
-    }
-});
+// Original API
+instance.get(url[, config])
+// Expand to
+instance.get(url[, config[, cacheConfig]])
 ```
 
-4. Send get request (the only difference from Axios)
+## cacheConfig
+
+- Enable caching: `cacheConfig.cache: true`
 
 ``` js
-/**
- * @param opt[Object] Additional cache configuration
- * @param opt.cache[Boolean] Whether to enable caching. It is not enabled by default
- * */ 
-
-// Enable cache
 instance.get(`/url`, { params: 1 }, {
     cache: true
 })
 
-// Close the cache and clear the previous cache contents
+```
+
+- Close and clear cache: `cacheConfig.cache: false`
+
+``` js
 instance.get(`/url`, { params: 1 }, {
     cache: false
 })
+// Equivalent to
+instance.get(`/url`, { params: 1 })
+
+
 ```
+
+- Update cache `cacheConfig.cache: 'update'`
+
+``` js
+instance.get(`/url`, { params: 1 }, {
+    cache: 'update'
+})
+
+```
+
+## Note
+
+- Only ` instance.get() 'method takes effect. You must call 'create()' to create an instance before using it
 
 ## License
 
