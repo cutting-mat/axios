@@ -1,6 +1,6 @@
 {
   "name": "@cutting-mat/axios",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "The same API as Axios, with an additional cache function for `Instance.get()`",
   "private": false,
   "main": "dist/index.common.js",
@@ -23,11 +23,12 @@
   },
   "homepage": "https://github.com/cutting-mat/axios#readme",
   "dependencies": {
-    "axios": "^0.25.0",
-    "element-ui": "^2.15.6",
-    "vue": "^2.6.14"
+    
   },
   "devDependencies": {
+    "axios": "^0.25.0",
+    "element-ui": "^2.15.6",
+    "vue": "^2.6.14",
     "@vue/cli-service": "^4.5.6",
     "vue-template-compiler": "^2.6.12"
   }
