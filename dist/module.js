@@ -22,22 +22,17 @@ $k3WXp$axios.create = function(config) {
         });
         let paramsStr = Object.prototype.toString.call(params) === '[object Object]' ? JSON.stringify(params) : '';
         let requestKey = `request_${url}?${paramsStr}`;
-        if (opt.cache) {
-            if (!$50161b2200a8afdd$var$responseCache[requestKey]) {
-                console.log('cache-axios create cache:', requestKey);
-                $50161b2200a8afdd$var$responseCache[requestKey] = $50161b2200a8afdd$var$axiosGet(url, params);
-                $50161b2200a8afdd$var$responseCache[requestKey].catch(()=>{
-                    delete $50161b2200a8afdd$var$responseCache[requestKey];
-                });
-            } else console.log('cache-axios use cache:', requestKey);
-            return $50161b2200a8afdd$var$responseCache[requestKey];
-        } else {
-            if ($50161b2200a8afdd$var$responseCache[requestKey]) {
-                console.log('cache-axios clear cache:', requestKey);
+        if (!$50161b2200a8afdd$var$responseCache[requestKey]) {
+            $50161b2200a8afdd$var$responseCache[requestKey] = $50161b2200a8afdd$var$axiosGet(url, params);
+            if (opt.cache) $50161b2200a8afdd$var$responseCache[requestKey].catch(()=>{
                 delete $50161b2200a8afdd$var$responseCache[requestKey];
-            }
-            return $50161b2200a8afdd$var$axiosGet(url, params);
+            });
+            else $50161b2200a8afdd$var$responseCache[requestKey].finally(()=>{
+                delete $50161b2200a8afdd$var$responseCache[requestKey];
+            });
+            return $50161b2200a8afdd$var$responseCache[requestKey];
         }
+        return $50161b2200a8afdd$var$responseCache[requestKey];
     };
     return instance;
 };

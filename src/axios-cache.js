@@ -26,26 +26,22 @@ axios.create = function (config) {
         let paramsStr = (Object.prototype.toString.call(params) === '[object Object]') ? JSON.stringify(params) : ''
         let requestKey = (`request_${url}?${paramsStr}`)
 
-        if (opt.cache) {
-            if (!responseCache[requestKey]) {
-                // console.log('Axios create cache:', requestKey)
-                responseCache[requestKey] = axiosGet(url, params)
+        if(!responseCache[requestKey]){
+            responseCache[requestKey] = axiosGet(url, params)
+
+            if (opt.cache) {
                 responseCache[requestKey].catch(() => {
                     delete responseCache[requestKey];
                 })
-            }else{
-                // console.log('Axios use cache:', requestKey)
+            } else {
+                responseCache[requestKey].finally(() => {
+                    delete responseCache[requestKey];
+                })
             }
-            
             return responseCache[requestKey]
-        } else {
-            if(responseCache[requestKey]){
-                // console.log('Axios clear cache:', requestKey)
-                delete responseCache[requestKey];
-            }
-            
-            return axiosGet(url, params)
         }
+
+        return responseCache[requestKey]
     }
 
     return instance;
