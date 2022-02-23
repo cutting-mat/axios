@@ -22,18 +22,18 @@ const instance = axios.create();
 
 ```
 
-3. 发送 get 请求（与Axios唯一的不同）
+3. 发送 get 请求（**与Axios唯一的不同**）
 
 ``` js
-// 原来的 api
+// 原 API
 instance.get(url[, config])
-// 扩展为
+// 兼容原 API 的前提下，扩展为
 instance.get(url[, config[, cacheConfig]])
 ```
 
 ## cacheConfig 配置
 
-- 启用缓存: `cacheConfig.cache: true`
+- 启用缓存
 
 ``` js
 instance.get(`/url`, { params: 1 }, {
@@ -42,7 +42,7 @@ instance.get(`/url`, { params: 1 }, {
 
 ```
 
-- 关闭并清除缓存: `cacheConfig.cache: false`
+- 关闭并清除缓存
 
 ``` js
 instance.get(`/url`, { params: 1 }, {
@@ -54,7 +54,7 @@ instance.get(`/url`, { params: 1 })
 
 ```
 
-- 更新缓存: `cacheConfig.cache: 'update'`
+- 更新缓存
 
 ``` js
 instance.get(`/url`, { params: 1 }, {
@@ -66,6 +66,7 @@ instance.get(`/url`, { params: 1 }, {
 ## 注意
 
 - 仅 `instance.get()` 方法生效，使用前必须先调用`create()`创建实例
+- 无论是否开启缓存，都会自动对并发请求做防抖处理
 
 ## License
 

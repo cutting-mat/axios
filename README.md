@@ -33,7 +33,7 @@ instance.get(url[, config[, cacheConfig]])
 
 ## cacheConfig
 
-- Enable caching: `cacheConfig.cache: true`
+- Enable caching
 
 ``` js
 instance.get(`/url`, { params: 1 }, {
@@ -42,7 +42,7 @@ instance.get(`/url`, { params: 1 }, {
 
 ```
 
-- Close and clear cache: `cacheConfig.cache: false`
+- Close and clear cache
 
 ``` js
 instance.get(`/url`, { params: 1 }, {
@@ -54,7 +54,7 @@ instance.get(`/url`, { params: 1 })
 
 ```
 
-- Update cache `cacheConfig.cache: 'update'`
+- Update cache 
 
 ``` js
 instance.get(`/url`, { params: 1 }, {
@@ -66,6 +66,7 @@ instance.get(`/url`, { params: 1 }, {
 ## Note
 
 - Only ` instance.get() 'method takes effect. You must call 'create()' to create an instance before using it
+- Automatic anti-shake handling of concurrent requests, regardless of whether caching is enabled
 
 ## License
 
