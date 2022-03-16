@@ -32,12 +32,11 @@ export default {
     bottom: 0;
     width: 100%; */
   background: #333;
-  padding: 24px;
+  padding: 20px;
   overflow: hidden;
   color: #999;
   font-size: 14px;
   text-align: center;
-  margin-top: 40px;
 }
 .foot a {
   color: #fff;

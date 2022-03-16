@@ -569,14 +569,13 @@ body {
 }
 .log[data-v-5d0597] {
   text-align: left;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 20px 0;
   min-height: 10em;
-  background:#dedede;
+  background: #dedede;
   border-radius: 8px;
   padding: 20px;
 }
-
 
 
 .foot[data-v-9a90fe] {
@@ -585,12 +584,11 @@ body {
     bottom: 0;
     width: 100%; */
   background: #333;
-  padding: 24px;
+  padding: 20px;
   overflow: hidden;
   color: #999;
   font-size: 14px;
   text-align: center;
-  margin-top: 40px;
 }
 .foot a[data-v-9a90fe] {
   color: #fff;

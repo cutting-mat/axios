@@ -91709,7 +91709,7 @@ const _withScopeId = (n)=>(_vue.pushScopeId("data-v-5d0597"), n = n(), _vue.popS
 const _hoisted_1 = {
     class: "wrap"
 };
-const _hoisted_2 = /*#__PURE__*/ _vue.createStaticVNode("<h1 class=\"maintitle\" data-v-5d0597> Axios的升级替代品 </h1><h2 class=\"subtitle\" data-v-5d0597> 无任何副作用，仅仅为 Instance.get() 扩展缓存功能 </h2><div data-v-5d0597><a href=\"https://github.com/cutting-mat/axios/blob/main/README_CN.md\" target=\"_blank\" class=\"myBtn\" data-v-5d0597><i class=\"el-icon-magic-stick\" data-v-5d0597></i> 快速开始 </a><a href=\"https://www.npmjs.com/package/axios\" target=\"_blank\" class=\"myBtn\" data-v-5d0597><i class=\"el-icon-reading\" data-v-5d0597></i> Axios 文档 </a></div><h3 class=\"channeltitle\" data-v-5d0597>演示</h3>", 4);
+const _hoisted_2 = /*#__PURE__*/ _vue.createStaticVNode("<h1 class=\"maintitle\" data-v-5d0597>Axios的升级替代品</h1><h2 class=\"subtitle\" data-v-5d0597>无任何副作用，仅仅为 Instance.get() 扩展缓存功能</h2><div data-v-5d0597><a href=\"https://github.com/cutting-mat/axios/blob/main/README_CN.md\" target=\"_blank\" class=\"myBtn\" data-v-5d0597><i class=\"el-icon-magic-stick\" data-v-5d0597></i> 快速开始 </a><a href=\"https://www.npmjs.com/package/axios\" target=\"_blank\" class=\"myBtn\" data-v-5d0597><i class=\"el-icon-reading\" data-v-5d0597></i> Axios 文档 </a></div><h3 class=\"channeltitle\" data-v-5d0597>演示</h3>", 4);
 const _hoisted_6 = /*#__PURE__*/ _vue.createTextVNode(" 请求(缓存开) ");
 const _hoisted_7 = /*#__PURE__*/ _vue.createTextVNode(" 请求(缓存关) ");
 const _hoisted_8 = /*#__PURE__*/ _vue.createTextVNode(" 请求(更新缓存) ");
@@ -91721,75 +91721,77 @@ const _hoisted_11 = {
 const _hoisted_12 = /*#__PURE__*/ _vue.createTextVNode(" 清空日志 ");
 function render(_ctx, _cache) {
     const _component_el_button = _vue.resolveComponent("el-button");
-    return _vue.openBlock(), _vue.createElementBlock("div", _hoisted_1, [
-        _hoisted_2,
-        _vue.createVNode(_component_el_button, {
-            onClick: _cache[0] || (_cache[0] = ($event)=>_ctx.testRequest(true)
-            )
-        }, {
-            default: _vue.withCtx(()=>[
-                    _hoisted_6
-                ]
-            ),
-            _: 1 /* STABLE */ 
-        }),
-        _vue.createVNode(_component_el_button, {
-            onClick: _cache[1] || (_cache[1] = ($event)=>_ctx.testRequest(false)
-            )
-        }, {
-            default: _vue.withCtx(()=>[
-                    _hoisted_7
-                ]
-            ),
-            _: 1 /* STABLE */ 
-        }),
-        _vue.createVNode(_component_el_button, {
-            onClick: _cache[2] || (_cache[2] = ($event)=>_ctx.testRequest('update')
-            )
-        }, {
-            default: _vue.withCtx(()=>[
-                    _hoisted_8
-                ]
-            ),
-            _: 1 /* STABLE */ 
-        }),
-        _vue.createVNode(_component_el_button, {
-            onClick: _cache[3] || (_cache[3] = ($event)=>_ctx.multiRequest(true)
-            )
-        }, {
-            default: _vue.withCtx(()=>[
-                    _hoisted_9
-                ]
-            ),
-            _: 1 /* STABLE */ 
-        }),
-        _vue.createVNode(_component_el_button, {
-            onClick: _cache[4] || (_cache[4] = ($event)=>_ctx.multiRequest(false)
-            )
-        }, {
-            default: _vue.withCtx(()=>[
-                    _hoisted_10
-                ]
-            ),
-            _: 1 /* STABLE */ 
-        }),
-        _vue.createElementVNode("div", _hoisted_11, [
+    return _vue.openBlock(), _vue.createElementBlock("div", null, [
+        _vue.createElementVNode("div", _hoisted_1, [
+            _hoisted_2,
             _vue.createVNode(_component_el_button, {
-                size: "mini",
-                onClick: _cache[5] || (_cache[5] = ($event)=>_ctx.clear()
+                onClick: _cache[0] || (_cache[0] = ($event)=>_ctx.testRequest(true)
                 )
             }, {
                 default: _vue.withCtx(()=>[
-                        _hoisted_12
+                        _hoisted_6
                     ]
                 ),
                 _: 1 /* STABLE */ 
             }),
-            (_vue.openBlock(true), _vue.createElementBlock(_vue.Fragment, null, _vue.renderList(_ctx.log, (item, index)=>{
-                return _vue.openBlock(), _vue.createElementBlock("div", {
-                    key: index
-                }, _vue.toDisplayString(item), 1 /* TEXT */ );
-            }), 128 /* KEYED_FRAGMENT */ ))
+            _vue.createVNode(_component_el_button, {
+                onClick: _cache[1] || (_cache[1] = ($event)=>_ctx.testRequest(false)
+                )
+            }, {
+                default: _vue.withCtx(()=>[
+                        _hoisted_7
+                    ]
+                ),
+                _: 1 /* STABLE */ 
+            }),
+            _vue.createVNode(_component_el_button, {
+                onClick: _cache[2] || (_cache[2] = ($event)=>_ctx.testRequest('update')
+                )
+            }, {
+                default: _vue.withCtx(()=>[
+                        _hoisted_8
+                    ]
+                ),
+                _: 1 /* STABLE */ 
+            }),
+            _vue.createVNode(_component_el_button, {
+                onClick: _cache[3] || (_cache[3] = ($event)=>_ctx.multiRequest(true)
+                )
+            }, {
+                default: _vue.withCtx(()=>[
+                        _hoisted_9
+                    ]
+                ),
+                _: 1 /* STABLE */ 
+            }),
+            _vue.createVNode(_component_el_button, {
+                onClick: _cache[4] || (_cache[4] = ($event)=>_ctx.multiRequest(false)
+                )
+            }, {
+                default: _vue.withCtx(()=>[
+                        _hoisted_10
+                    ]
+                ),
+                _: 1 /* STABLE */ 
+            }),
+            _vue.createElementVNode("div", _hoisted_11, [
+                _vue.createVNode(_component_el_button, {
+                    size: "mini",
+                    onClick: _cache[5] || (_cache[5] = ($event)=>_ctx.clear()
+                    )
+                }, {
+                    default: _vue.withCtx(()=>[
+                            _hoisted_12
+                        ]
+                    ),
+                    _: 1 /* STABLE */ 
+                }),
+                (_vue.openBlock(true), _vue.createElementBlock(_vue.Fragment, null, _vue.renderList(_ctx.log, (item, index)=>{
+                    return _vue.openBlock(), _vue.createElementBlock("div", {
+                        key: index
+                    }, _vue.toDisplayString(item), 1 /* TEXT */ );
+                }), 128 /* KEYED_FRAGMENT */ ))
+            ])
         ])
     ]);
 }

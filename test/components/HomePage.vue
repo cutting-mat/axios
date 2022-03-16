@@ -1,43 +1,40 @@
 <template>
-  <div class="wrap">
-    <h1 class="maintitle">
-      Axios的升级替代品
-    </h1>
-    <h2 class="subtitle">
-      无任何副作用，仅仅为 Instance.get() 扩展缓存功能
-    </h2>
+  <div>
+    <div class="wrap">
+      <h1 class="maintitle">Axios的升级替代品</h1>
+      <h2 class="subtitle">无任何副作用，仅仅为 Instance.get() 扩展缓存功能</h2>
 
-    
-    <div>
-      <a
-        href="https://github.com/cutting-mat/axios/blob/main/README_CN.md"
-        target="_blank"
-        class="myBtn"
-      >
-        <i class="el-icon-magic-stick"></i>
-        快速开始
-      </a>
+      <div>
+        <a
+          href="https://github.com/cutting-mat/axios/blob/main/README_CN.md"
+          target="_blank"
+          class="myBtn"
+        >
+          <i class="el-icon-magic-stick"></i>
+          快速开始
+        </a>
 
-    <a
-        href="https://www.npmjs.com/package/axios"
-        target="_blank"
-        class="myBtn"
-      >
-        <i class="el-icon-reading"></i>
-        Axios 文档
-      </a>
-    </div>
+        <a
+          href="https://www.npmjs.com/package/axios"
+          target="_blank"
+          class="myBtn"
+        >
+          <i class="el-icon-reading"></i>
+          Axios 文档
+        </a>
+      </div>
 
-    <h3 class="channeltitle">演示</h3>
-    <el-button @click="testRequest(true)"> 请求(缓存开) </el-button>
-    <el-button @click="testRequest(false)"> 请求(缓存关) </el-button>
-    <el-button @click="testRequest('update')"> 请求(更新缓存) </el-button>
-    <el-button @click="multiRequest(true)"> 并发3次请求(缓存开) </el-button>
-    <el-button @click="multiRequest(false)"> 并发3次请求(缓存关) </el-button>
-    <div class="log">
-      <el-button size="mini" @click="clear()"> 清空日志 </el-button>
-      <div v-for="(item, index) in log" :key="index">
-        {{ item }}
+      <h3 class="channeltitle">演示</h3>
+      <el-button @click="testRequest(true)"> 请求(缓存开) </el-button>
+      <el-button @click="testRequest(false)"> 请求(缓存关) </el-button>
+      <el-button @click="testRequest('update')"> 请求(更新缓存) </el-button>
+      <el-button @click="multiRequest(true)"> 并发3次请求(缓存开) </el-button>
+      <el-button @click="multiRequest(false)"> 并发3次请求(缓存关) </el-button>
+      <div class="log">
+        <el-button size="mini" @click="clear()"> 清空日志 </el-button>
+        <div v-for="(item, index) in log" :key="index">
+          {{ item }}
+        </div>
       </div>
     </div>
   </div>
@@ -87,7 +84,6 @@ export default {
 };
 </script>
 <style scoped>
-
 .wrap {
   width: 1200px;
   text-align: center;
@@ -124,12 +120,11 @@ export default {
 
 .log {
   text-align: left;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 20px 0;
   min-height: 10em;
-  background:#dedede;
+  background: #dedede;
   border-radius: 8px;
   padding: 20px;
 }
-
 </style>>

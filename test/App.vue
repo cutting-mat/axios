@@ -1,8 +1,6 @@
 <template>
   <myHeader />
-
   <HomePage class="flex-1 scrollbar" />
-
   <myFooter />
 </template>
 

@@ -7,9 +7,9 @@
   "main": "dist/main.js",
   "module": "dist/module.js",
   "scripts": {
-    "dev": "parcel test/index.html --dist-dir docs",
+    "serve": "parcel test/index.html --dist-dir docs",
     "build": "parcel build",
-    "build-web": "parcel test/index.html --dist-dir docs --public-url /axios/"
+    "build-doc": "parcel test/index.html --dist-dir docs --public-url /axios/"
   },
   "repository": {
     "type": "git",
