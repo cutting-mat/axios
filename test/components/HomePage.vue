@@ -28,7 +28,7 @@
       <el-button @click="testRequest(true)"> 请求(缓存开) </el-button>
       <el-button @click="testRequest(false)"> 请求(缓存关) </el-button>
       <el-button @click="testRequest('update')"> 请求(更新缓存) </el-button>
-      <el-button @click="multiRequest(true)"> 并发3次请求(缓存开) </el-button>
+      <el-button @click="multiRequest()"> 并发3次请求(默认) </el-button>
       <el-button @click="multiRequest(false)"> 并发3次请求(缓存关) </el-button>
       <div class="log">
         <el-button size="mini" @click="clear()"> 清空日志 </el-button>
@@ -64,7 +64,7 @@ export default {
     },
     testRequest(cacheOption) {
       return instance
-        .get("http://rap2api.taobao.org/app/mock/3567/return/test", null, {
+        .get("http://yapi.smart-xwork.cn/mock/154414/return/test", null, {
           cache: cacheOption,
         })
         .then((res) => {
@@ -127,4 +127,5 @@ export default {
   border-radius: 8px;
   padding: 20px;
 }
-</style>>
+</style>
+>

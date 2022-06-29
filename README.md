@@ -16,15 +16,14 @@ npm i @cutting-mat/axios --save
 
 2. Create Axios instance
 
-``` js
-import axios from "@cutting-mat/axios"
+```js
+import axios from "@cutting-mat/axios";
 const instance = axios.create();
-
 ```
 
 3. Send get request (the only difference from Axios)
 
-``` js
+```js
 // Original API
 instance.get(url[, config])
 // Expand to
@@ -35,38 +34,46 @@ instance.get(url[, config[, cacheConfig]])
 
 - Enable caching
 
-``` js
-instance.get(`/url`, { params: 1 }, {
-    cache: true
-})
-
+```js
+instance.get(
+  `/url`,
+  { params: 1 },
+  {
+    cache: true,
+  }
+);
 ```
 
 - Close and clear cache
 
-``` js
-instance.get(`/url`, { params: 1 }, {
-    cache: false
-})
+```js
+instance.get(
+  `/url`,
+  { params: 1 },
+  {
+    cache: false,
+  }
+);
 // Equivalent to
-instance.get(`/url`, { params: 1 })
-
-
+instance.get(`/url`, { params: 1 });
 ```
 
-- Update cache 
+- Update cache
 
-``` js
-instance.get(`/url`, { params: 1 }, {
-    cache: 'update'
-})
-
+```js
+instance.get(
+  `/url`,
+  { params: 1 },
+  {
+    cache: "update",
+  }
+);
 ```
 
 ## Note
 
 - Only ` instance.get() 'method takes effect. You must call 'create()' to create an instance before using it
-- Automatic anti-shake handling of concurrent requests, regardless of whether caching is enabled
+- The default is to do anti-shake on concurrent requests, to force concurrency you need to set `cache: 'update'`
 
 ## License
 

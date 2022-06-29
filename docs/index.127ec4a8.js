@@ -90227,7 +90227,7 @@ exports.default = {
             this.log = [];
         },
         testRequest (cacheOption) {
-            return instance.get("http://rap2api.taobao.org/app/mock/3567/return/test", null, {
+            return instance.get("http://yapi.smart-xwork.cn/mock/154414/return/test", null, {
                 cache: cacheOption
             }).then((res)=>{
                 this.log.push(`${new Date().getTime()}: ${JSON.stringify(res.data)}`);
@@ -90260,14 +90260,14 @@ _axiosDefault.default.create = function(config) {
     // 替换实例的 get()
     instance.get = function(url1, params1, opt) {
         opt = Object.assign({
-            cache: false
+            cache: null
         }, opt || {
         });
-        const paramsStr = Object.prototype.toString.call(params1) === '[object Object]' ? JSON.stringify(params1) : '';
+        const paramsStr = Object.prototype.toString.call(params1) === "[object Object]" ? JSON.stringify(params1) : "";
         const requestKey = `${url1}?${paramsStr}`;
         const createPromise = function(url, params) {
             return axiosGet(url, params).then((res)=>{
-                if (opt.cache === true || opt.cache === 'update') responseCache[requestKey].status = 'resolved';
+                if (opt.cache === true || opt.cache === "update") responseCache[requestKey].status = "resolved";
                 else delete responseCache[requestKey];
                 return res;
             }).catch((err)=>{
@@ -90275,11 +90275,10 @@ _axiosDefault.default.create = function(config) {
                 return err;
             });
         };
-        if (!responseCache[requestKey] // 无缓存
-         || responseCache[requestKey].status !== 'pending' && !opt.cache || opt.cache === 'update' // 有缓存且要更新缓存
+        if (!responseCache[requestKey] || responseCache[requestKey].status !== "pending" && opt.cache === "update" || opt.cache === false // 不需要缓存
         ) // console.log('创建缓存对象', requestKey)
         responseCache[requestKey] = {
-            status: 'pending',
+            status: "pending",
             promise: createPromise(url1, params1)
         };
         return responseCache[requestKey].promise;
@@ -91713,7 +91712,7 @@ const _hoisted_2 = /*#__PURE__*/ _vue.createStaticVNode("<h1 class=\"maintitle\"
 const _hoisted_6 = /*#__PURE__*/ _vue.createTextVNode(" 请求(缓存开) ");
 const _hoisted_7 = /*#__PURE__*/ _vue.createTextVNode(" 请求(缓存关) ");
 const _hoisted_8 = /*#__PURE__*/ _vue.createTextVNode(" 请求(更新缓存) ");
-const _hoisted_9 = /*#__PURE__*/ _vue.createTextVNode(" 并发3次请求(缓存开) ");
+const _hoisted_9 = /*#__PURE__*/ _vue.createTextVNode(" 并发3次请求(默认) ");
 const _hoisted_10 = /*#__PURE__*/ _vue.createTextVNode(" 并发3次请求(缓存关) ");
 const _hoisted_11 = {
     class: "log"
@@ -91755,7 +91754,7 @@ function render(_ctx, _cache) {
                 _: 1 /* STABLE */ 
             }),
             _vue.createVNode(_component_el_button, {
-                onClick: _cache[3] || (_cache[3] = ($event)=>_ctx.multiRequest(true)
+                onClick: _cache[3] || (_cache[3] = ($event)=>_ctx.multiRequest()
                 )
             }, {
                 default: _vue.withCtx(()=>[

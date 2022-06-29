@@ -25,14 +25,14 @@ let $2448ed1f9f693dd4$export$b4c67320c85a8b9d = {
     // 替换实例的 get()
     instance.get = function(url1, params1, opt) {
         opt = Object.assign({
-            cache: false
+            cache: null
         }, opt || {
         });
-        const paramsStr = Object.prototype.toString.call(params1) === '[object Object]' ? JSON.stringify(params1) : '';
+        const paramsStr = Object.prototype.toString.call(params1) === "[object Object]" ? JSON.stringify(params1) : "";
         const requestKey = `${url1}?${paramsStr}`;
         const createPromise = function(url, params) {
             return axiosGet(url, params).then((res)=>{
-                if (opt.cache === true || opt.cache === 'update') $2448ed1f9f693dd4$export$b4c67320c85a8b9d[requestKey].status = 'resolved';
+                if (opt.cache === true || opt.cache === "update") $2448ed1f9f693dd4$export$b4c67320c85a8b9d[requestKey].status = "resolved";
                 else delete $2448ed1f9f693dd4$export$b4c67320c85a8b9d[requestKey];
                 return res;
             }).catch((err)=>{
@@ -40,11 +40,10 @@ let $2448ed1f9f693dd4$export$b4c67320c85a8b9d = {
                 return err;
             });
         };
-        if (!$2448ed1f9f693dd4$export$b4c67320c85a8b9d[requestKey] // 无缓存
-         || $2448ed1f9f693dd4$export$b4c67320c85a8b9d[requestKey].status !== 'pending' && !opt.cache || opt.cache === 'update' // 有缓存且要更新缓存
+        if (!$2448ed1f9f693dd4$export$b4c67320c85a8b9d[requestKey] || $2448ed1f9f693dd4$export$b4c67320c85a8b9d[requestKey].status !== "pending" && opt.cache === "update" || opt.cache === false // 不需要缓存
         ) // console.log('创建缓存对象', requestKey)
         $2448ed1f9f693dd4$export$b4c67320c85a8b9d[requestKey] = {
-            status: 'pending',
+            status: "pending",
             promise: createPromise(url1, params1)
         };
         return $2448ed1f9f693dd4$export$b4c67320c85a8b9d[requestKey].promise;
