@@ -1,15 +1,39 @@
 {
   "name": "@cutting-mat/axios",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "The same API as Axios, with an additional cache function for `Instance.get()`",
   "private": false,
-  "source": "src/axios.js",
-  "main": "dist/main.js",
-  "module": "dist/module.js",
+  "files": [
+    "dist",
+    "LICENSE",
+    "package.json",
+    "README.md",
+    "README_CN.md"
+  ],
+  "main": "./dist/main.umd.js",
+  "module": "./dist/main.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/main.es.js",
+      "require": "./dist/main.umd.js"
+    }
+  },
   "scripts": {
-    "serve": "parcel test/index.html --dist-dir dev-dist",
-    "build": "parcel build",
-    "build-site": "parcel test/index.html --dist-dir site --public-url /axios/"
+    "serve": "vite",
+    "build": "vite build",
+    "build-site": "vite build --config vite.config.site.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "devDependencies": {
+    "@element-plus/icons-vue": "^2.0.6",
+    "@vitejs/plugin-vue": "2.3.3",
+    "element-plus": "^2.2.6",
+    "vite": "^2.9.13",
+    "vue": "^3.2.37",
+    "vue-router": "^4.0.16"
   },
   "repository": {
     "type": "git",
@@ -20,17 +44,6 @@
     "cache"
   ],
   "author": "tower12229@foxmail.com",
-  "dependencies": {
-    "axios": "^0.26.0"
-  },
-  "devDependencies": {
-    "@element-plus/icons-vue": "^0.2.7",
-    "@parcel/transformer-vue": "^2.3.2",
-    "element-plus": "^2.0.2",
-    "parcel": "^2.3.2",
-    "process": "^0.11.10",
-    "vue": "^3.2.31"
-  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cutting-mat/axios/issues"

@@ -1,5 +1,5 @@
-.parcel-cache
 node_modules
-/package-lock.json
-dev-dist
+.vscode
+package-lock.json
+dist
 site

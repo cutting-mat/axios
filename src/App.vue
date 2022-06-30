@@ -6,15 +6,15 @@
 
 <script>
 //import { util } from "@/core";
-import myHeader from "./components/header";
-import HomePage from "./components/HomePage";
-import myFooter from "./components/footer";
+import myHeader from "./components/header.vue";
+import HomePage from "./components/HomePage.vue";
+import myFooter from "./components/footer.vue";
 
 export default {
   components: {
     myHeader,
     myFooter,
-    HomePage
+    HomePage,
   },
   data() {
     return {
@@ -33,5 +33,4 @@ export default {
 };
 </script>
 
-<style >
-</style>
+<style></style>

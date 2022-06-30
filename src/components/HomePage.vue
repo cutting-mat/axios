@@ -31,7 +31,7 @@
       <el-button @click="multiRequest()"> 并发3次请求(默认) </el-button>
       <el-button @click="multiRequest(false)"> 并发3次请求(缓存关) </el-button>
       <div class="log">
-        <el-button size="mini" @click="clear()"> 清空日志 </el-button>
+        <el-button size="small" @click="clear()"> 清空日志 </el-button>
         <div v-for="(item, index) in log" :key="index">
           {{ item }}
         </div>
@@ -41,8 +41,8 @@
 </template>
 
 <script>
-import axios from "../../src/axios";
-import { responseCache } from "../../src/axios";
+import axios from "../../lib/";
+import { responseCache } from "../../lib/";
 
 // 创建请求实例
 const instance = axios.create({
