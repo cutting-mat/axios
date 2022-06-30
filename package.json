@@ -1,6 +1,6 @@
 {
   "name": "@cutting-mat/axios",
-  "version": "1.2.1",
+  "version": "1.2.0",
   "description": "The same API as Axios, with an additional cache function for `Instance.get()`",
   "private": false,
   "files": [

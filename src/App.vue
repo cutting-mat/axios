@@ -1,7 +1,9 @@
 <template>
-  <myHeader />
-  <HomePage class="flex-1 scrollbar" />
-  <myFooter />
+  <div class="flex-col" style="height: 100%">
+    <myHeader />
+    <HomePage class="flex-1 scrollbar" />
+    <myFooter />
+  </div>
 </template>
 
 <script>
